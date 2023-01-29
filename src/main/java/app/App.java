@@ -38,13 +38,13 @@ public class App {
                 players[i] = new Player(i, "Bot" + (i - numberPlayer));
             }
         }
-        scanner.close();
         int winnerTh = referee.startMatch(players, numberRealPlayer);
         for (int i = 1; i <= 4; i++) {
             if (winnerTh != i && i > numberRealPlayer) {
                 players[i].getFeel();
             }
         }
+        scanner.close();
     }
 
     public static void main(String[] args) {
